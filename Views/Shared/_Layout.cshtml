@@ -13,7 +13,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
+                @* HEAT logo *@
                 <img src="~/img/H.E.A.T. Logo.jpg" alt="Logo" style="height: 40px; width: auto, margin-right: 20px" />
+                @* nav bar *@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="margin-left: 20px;">H.E.A.T.</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +23,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @* nav bar buttons *@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -32,12 +35,13 @@
             </div>
         </nav>
     </header>
+    @* renders page body *@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
+    @* footer *@
     <footer class="border-top footer text-muted">
         <div class="container2">
             &copy; 2025 - Ethan Hair<a asp-area="" asp-controller="Home"></a>

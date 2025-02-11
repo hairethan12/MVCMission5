@@ -3,6 +3,7 @@
 }
 
 <div class="text-center">
+    @* heading *@
     <h1 class="display-4">H.E.A.T.</h1>
     <h3>Hair Elite Athletic Training</h3>
     <br />
@@ -10,8 +11,10 @@
     
 </div>
 <body>
+    @* Css and image *@
     <div style ="display: flex; align-items: center; gap: 30px; max-width: 1000px; margin: auto;">
     <img src="~/img/img_2150.jpeg" style="float: left;" width="600" height="400" />
+    @* first paragraph *@
     <p style="text-align: center; margin: 0 auto; padding-left: 20px;">
         At H.E.A.T. (Hair Elite Athletic Training), we are committed to elevating athletes to their highest potential through elite-level training,
         discipline, and dedication. With 13 years of coaching experience in basketball, I have had the privilege of developing athletes at various levels, 
@@ -21,6 +24,7 @@
     </div>
     <br /> <br /> <br />
     <div style="display: flex; align-items: center; gap: 30px; max-width: 1000px; margin: auto;">
+        @* second paragraph *@
         <p style="text-align: center; margin: 0 auto; padding-left: 20px;">
             Beyond coaching, my experience extends to training elite sports teams, including the current #1 6A basketball team in Utah.
             I have worked with semi-pro football players and teams across different disciplines, ensuring each athlete receives customized,
@@ -28,9 +32,11 @@
             of competitive sports, allowing me to design programs that develop strength, endurance, and mental toughness. At H.E.A.T. Training,
             we don't just build athletes—we build winners. If you're ready to take your game to the next level, let's get to work!
         </p>
+        @* second picture *@
         <img src="~/img/img_2133.jpeg" style="display: block; margin-left: auto; margin-right: 0; width: 600px; height: 400px;" />
     </div>
     <div style="text-align: center; margin-top: 20px;">
+        @* button to calculator *@
         <a class="btn btn-primary" asp-controller="Home" asp-action="Calculator">Get a Quote!</a>
     </div>
 </body>

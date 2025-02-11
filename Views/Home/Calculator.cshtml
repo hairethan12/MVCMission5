@@ -7,36 +7,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @* title *@
     <title>Hourly Rate Calculator</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="container">
+        @* hours *@
         <label for="hours">Enter Hours Needed:</label>
         <input type="number" id="hours" min="1" placeholder="Enter hours" required>
         <br> <br />
+        @* hourly rate *@
         <label for="rate">Hourly Rate:</label>
         <input type="text" id="rate" value="$75" readonly>
         <br> <br />
+        @* button to calculate total *@
         <button id="calculate" class="btn btn-primary">Calculate Total</button>
         <br> <br />
+        @* total cost output *@
         <label for="total">Total Cost:</label>
         <input type="text" id="total" readonly>
         <br> <br />
+        @* back to home button *@
         <div style="text-align: center; margin-top: 20px;">
             <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Back to Home</a>
         </div>
     </div>
 
     <script>
+        // calulator code
         $(document).ready(function(){
             $("#calculate").click(function(){
+                // hours input
                 let hours = parseFloat($("#hours").val());
-                let rate = 50;
+                // Rate
+                let rate = 50; 
+                // Error checking
                 if (isNaN(hours) || hours <= 0) {
                     alert("Please enter a valid positive number for hours.");
                     return;
                 }
+                // total calculation
                 let total = hours * rate;
                 $("#total").val("$" + total.toFixed(2));
             });
